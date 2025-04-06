@@ -27,7 +27,14 @@ public class VariableUse {
 		// Assign one variable
 		int cundinamarcaPeople, boyacaPeople = 90000; // This line only assign a value to boyacaPeople variable
 		System.out.println("The people in Boyaca are: " + boyacaPeople);
-
+		
+		// Working with bytes
+		byte first = 15;
+		byte second = 25;
+		byte result = (byte)(first + second);
+		System.out.println("The result is " + result); // casting
+		System.out.println("The type of the number is: " + ((Object)first).getClass().getSimpleName());
+		System.out.println("The type of the sum is: " + ((Object)(first + second)).getClass().getSimpleName());
 	}
 
 }
