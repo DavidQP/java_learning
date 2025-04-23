@@ -5,21 +5,29 @@ import java.util.GregorianCalendar;
 
 public class Employee {
 	
-	private String name;
+	private static int id; 
+	private static Employee[] myEmployees = new Employee[100] ;
+	
+	private final String name;
 	private double salary;
 	private Date date;
+	
 	
 	public Employee() {
 		this.name = "Fake employee";
 		this.salary = 1200.0;
 		GregorianCalendar calendar = new GregorianCalendar(2025, 4, 22);
 		this.date = calendar.getTime();
+		myEmployees[Employee.id] = this;
+		Employee.id++;
 	}
 		
 	public Employee(String name, double salary, Date date) {
 		this.name = name;
 		this.salary = salary;
 		this.date = date;
+		myEmployees[Employee.id] = this;
+		Employee.id++;
 	}
 	
 	public String getName() {
@@ -35,10 +43,6 @@ public class Employee {
 		return this.date;
 	}
 	
-	public void setName(String name) {
-		this.name = name;
-	}
-	
 	public void setSalary(double salary) {
 		this.salary = salary;
 	}
@@ -51,5 +55,13 @@ public class Employee {
 	public void updateSalary(double percentage) {
 		double increment = this.salary * percentage;
 		this.salary += increment;
+	}
+	
+	public static int getNumOfEmployees() {
+		return Employee.id;
+	}
+	
+	public static Employee[] getAllEmployees() {
+		return myEmployees;
 	}
 }

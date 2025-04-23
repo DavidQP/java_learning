@@ -11,16 +11,23 @@ public class TestingObjects {
 	}
 	
 	public static void testEmployeeClass() {
-		Employee[] myEmployees = new Employee[3];
-		myEmployees[0] = newEmployee();
-		myEmployees[1] = newEmployee();
-		myEmployees[2] = newEmployee();
+		newEmployee();
+		newEmployee();
+		newEmployee();
+		
+		Employee[] myEmployees = Employee.getAllEmployees();
+		//System.out.println(myEmployees[0]);
 		
 		for(Employee employee: myEmployees) {
+			if(employee == null) {
+				break;
+			}
+			
 			System.out.println("Name " + employee.getName() + 
 							   " Salary: " + employee.getSalary() +
 							   " leave the company in: " + employee.getDate());
 		}
+		System.out.println("The number of employees in the company are: " + Employee.getNumOfEmployees());
 	}
 	
 	public static Employee newEmployee() {
