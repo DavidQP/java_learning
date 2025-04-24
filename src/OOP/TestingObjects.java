@@ -7,7 +7,18 @@ public class TestingObjects {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//testCarClass();
-		testEmployeeClass();
+		//testEmployeeClass();
+		testBossClass();
+	}
+	
+	public static void testBossClass() {
+		Boss ceo = new Boss();
+		ceo.setSalary(2800);
+		ceo.setIncentive(200);
+		System.out.println(ceo.getName());
+		System.out.println(ceo.getSalary());
+		System.out.println(ceo.getDate());
+		System.out.println(ceo.salaryDetails());
 	}
 	
 	public static void testEmployeeClass() {
