@@ -1,6 +1,7 @@
 package OOP;
 
 import java.util.Date;
+import java.util.Iterator;
 
 public class TestingObjects {
 
@@ -8,7 +9,15 @@ public class TestingObjects {
 		// TODO Auto-generated method stub
 		//testCarClass();
 		//testEmployeeClass();
-		testBossClass();
+		//testBossClass();
+		testPersonClass();
+		Object example = new Object();
+		
+	}
+	
+	public static void testPersonClass() {
+		Person[] people = new Person[5];
+		
 	}
 	
 	public static void testBossClass() {
