@@ -11,11 +11,17 @@ public class TestingObjects {
 		//testEmployeeClass();
 		//testBossClass();
 		//testPersonClass();
-		testTimeExample();
+		//testTimerExample();
+		testTimerRefactoringExample();
 		
 	}
 	
-	public static void testTimeExample() {
+	public static void testTimerRefactoringExample() {
+		TimerExampleRefactoringV3 timer = new TimerExampleRefactoringV3();
+		timer.init(2000, false);
+	}
+	
+	public static void testTimerExample() {
 		TimerExampleRefactoring example = new TimerExampleRefactoring(2500, true);
 		example.init();
 		
