@@ -1,7 +1,7 @@
 package OOP;
 
 import java.util.Date;
-import java.util.Iterator;
+import static javax.swing.JOptionPane.showMessageDialog;
 
 public class TestingObjects {
 
@@ -10,8 +10,18 @@ public class TestingObjects {
 		//testCarClass();
 		//testEmployeeClass();
 		//testBossClass();
-		testPersonClass();
-		Object example = new Object();
+		//testPersonClass();
+		testTimeExample();
+		
+	}
+	
+	public static void testTimeExample() {
+		TimerExampleRefactoring example = new TimerExampleRefactoring(2500, true);
+		example.init();
+		
+		showMessageDialog(null, "Click in accept if you need to close the program");
+		
+		System.exit(0);
 		
 	}
 	
