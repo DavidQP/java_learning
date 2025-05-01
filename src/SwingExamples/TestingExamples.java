@@ -1,11 +1,19 @@
 package SwingExamples;
 
+import javax.swing.JFrame;
+
 public class TestingExamples {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//testingMakeFrames();
-		testingCenterFrame();
+		//testingCenterFrame();
+		testFrameWithText();
+	}
+	
+	public static void testFrameWithText() {
+		FrameWithText myFrame = new FrameWithText();
+		myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 	
 	public static void testingCenterFrame() {
