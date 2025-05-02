@@ -8,7 +8,14 @@ public class TestingExamples {
 		// TODO Auto-generated method stub
 		//testingMakeFrames();
 		//testingCenterFrame();
-		testFrameWithText();
+		//testFrameWithText();
+		testingFigures();
+	}
+	
+	public static void testingFigures() {
+		Figure myFigure = new Figure();
+		FigurePanel myPanel = new FigurePanel();
+		myFigure.add(myPanel);
 	}
 	
 	public static void testFrameWithText() {
