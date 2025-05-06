@@ -9,7 +9,12 @@ public class TestingExamples {
 		//testingMakeFrames();
 		//testingCenterFrame();
 		//testFrameWithText();
-		testingFigures();
+		//testingFigures();
+		testingColorFrame();
+	}
+	
+	public static void testingColorFrame() {
+		ColorFrame fc = new ColorFrame();
 	}
 	
 	public static void testingFigures() {
