@@ -1,13 +1,11 @@
 package Events;
 
-import java.awt.event.WindowListener;
+//import java.awt.event.WindowListener; // An interface
 import java.awt.event.WindowEvent;
+import java.awt.event.WindowAdapter; // This abstract class, implements two interfaces
 
-public class WindowBehavior implements WindowListener {
-	public void windowActivated(WindowEvent e) {
-		System.out.println("Activate window");
-	}
-	
+public class WindowBehavior extends WindowAdapter {
+		
 	public void windowClosed(WindowEvent e) {
 		
 	}
@@ -16,19 +14,9 @@ public class WindowBehavior implements WindowListener {
 		System.out.println("Thanks for using this window goodbye");
 	}
 	
-	public void windowDeactivated(WindowEvent e) {
-		
-	}
-	
-	public void windowDeiconified(WindowEvent e) {
-		System.out.println("Opening window");
-	}
 	
 	public void windowIconified(WindowEvent e) {
 		System.out.println("Minimizing window");
 	}
 	
-	public void windowOpened(WindowEvent e) {
-		
-	}
 }
